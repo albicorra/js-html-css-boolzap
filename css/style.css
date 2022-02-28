@@ -1,0 +1,27 @@
+/* layout */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* back ground */
+.bg-wp{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.bg-wp_1{
+    height: 10vh;
+    background-color: #009A8B;
+}
+
+.bg-wp_2{
+    height: 90vh;
+    background-color: #D3DCD9;
+}
