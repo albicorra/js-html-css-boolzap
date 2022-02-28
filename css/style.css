@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -12,7 +15,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 100%;
     position: relative;
 }
 
@@ -22,6 +24,162 @@
 }
 
 .bg-wp_2{
-    height: 90vh;
+    flex-grow: 1;
     background-color: #D3DCD9;
 }
+
+img{
+    width: 100%;
+}
+
+
+/* whats app */
+.container-wp{
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    bottom: 50px;
+    right: 150px;
+    display: flex;
+    background-color:blue;  
+}
+
+.container-contact{
+    background-color: aquamarine;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.container-chat{
+    background-color: azure;
+    flex-grow: 1;
+}
+
+
+/* header contact */
+.header-profile{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.profile{
+    width: 75%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.icon{
+    width: 25%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #54656F;
+}
+
+.img-profile{
+    width: 20%;
+    padding: 5px;
+}
+
+.img-profile > img{
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.notification{
+    background-color: #54BDEB;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.bell{
+    width: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: #54BDEB;
+}
+
+.message{
+    padding-left: 15px;
+}
+
+.message > p:last-child{
+    color: #54656F;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* navbar */
+.nav-bar{
+    min-height: 45px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #a8c2d1;
+}
+
+.nav-bar > input{
+    width: 300px;
+    border: none;
+    height: 30px;
+    background-color: #EFF2F5;
+    border-radius: 3px;
+}
+
+.nav-bar > input:focus-visible{
+    outline: none;
+}
+
+.nav-bar > button{
+    border: none;
+    width: 50px;
+    height: 30px;
+    background-color: #EFF2F5;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* contact */
+.contact{
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;  
+    border-bottom: 2px solid #a8c2d1;
+}
+
+.contact-chat{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.contact-chat > div:last-child{
+    /* margin-top: 5px; */
+    font-size: 12px;
+    color: #54656F;
+    font-weight: 400;
+}
+
+.contact-date{
+    font-size: 10px;
+}
+
