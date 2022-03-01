@@ -53,10 +53,16 @@ img{
 }
 
 .container-chat{
-    background-color: azure;
+    background-color: #F8F8F8;
     flex-grow: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-chat.active{
+    display: flex;
 }
 
 
@@ -67,6 +73,7 @@ img{
     justify-content: space-between;
     align-items: center;
     background-color: #EFF2F5;
+    width: 100%;
 }
 
 .profile{
@@ -170,6 +177,11 @@ img{
     border-bottom: 1px solid #E9EDEF;
 }
 
+.contact:hover{
+    background-color: #F5F6F6;
+    cursor: pointer;
+}
+
 .contact-chat{
     display: flex;
     flex-direction: column;
@@ -199,6 +211,7 @@ img{
     gap: 10px;
     align-items: center;
     background-color: #EFF2F5;
+    width: 100%;
 }
 
 .icon-text{
@@ -249,6 +262,7 @@ img{
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    width: 100%;
 }
 
 .message{
@@ -282,4 +296,38 @@ img{
 }
 .message.recived + .message.sent{
     margin-top: 10px;
+}
+
+
+/* Home page */
+.container-homepage{
+    width: 400px;
+    color: #54656F;
+}
+
+.container-homepage > p:last-child{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #E9EDEF;
+}
+
+.home-img{
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+}
+
+.home-text{
+    text-align: center;
+}
+
+.home-text > h1{
+    font-weight: 600;
+}
+
+.home-text > p{
+    font-size: 12px;
+    margin: 20px 0px 40px 0px;
 }

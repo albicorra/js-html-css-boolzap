@@ -63,17 +63,36 @@
                         </div>
                         
                         <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
+                            <div>{{el.name}}</div>
+                            <div>{{el.messages[el.messages.length-1].text}}</div>
                         </div>
                     </div>
 
-                    <div class="contact-date">28/02/2022 12:07</div>
+                    <div class="contact-date">{{el.messages[el.messages.length-1].date}}</div>
                 </div>                
 
             </div>
 
-            <div class="container-chat">
+            
+            <div class="container-chat active">
+
+                <div class="container-homepage">
+                    <div class="home-img">
+                        <img src="img/Screenshot (13).png" alt="">
+                    </div>
+
+                    <div class="home-text">
+                        <h1>Mantieni il telefono connesso</h2>
+                        <p>WhatsApp si collega al tuo telefono per sincronizzare i messaggi. Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.</p>
+                    </div>
+
+                    <p>Chiama dal computer con WhatsApp per Windows. Scaricalo ora</p>
+                </div>
+
+            </div>
+            
+
+            <div class="container-chat" v-for="(el,i) in contact">
 
                 <div class="header-profile">
                     <div class="profile">

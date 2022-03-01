@@ -6,7 +6,7 @@ const app = new Vue ({
         contact: [
             {
                 name: 'Michele',
-                Avatar: 'https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50',
+                avatar: 'https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50',
                 visible: true,
                 messages: [
 
@@ -31,7 +31,7 @@ const app = new Vue ({
 
             {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: 'https://doodleipsum.com/300x300/avatar-2?i=2fa0df73fe58cc54367f9fdd8d86b073',
                 visible: true,
                 messages: [
 
@@ -56,7 +56,7 @@ const app = new Vue ({
 
             {
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: 'https://doodleipsum.com/300x300/avatar-2?i=a84e32424b61b2c7a0c4e9d6451375c2',
                 visible: true,
                 messages: [
 
@@ -81,7 +81,7 @@ const app = new Vue ({
               
             {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: 'https://doodleipsum.com/300x300/avatar-2?i=560a7437a5808aa3102849d9e89fa0c5',
                 visible: true,
                 messages: [
 
