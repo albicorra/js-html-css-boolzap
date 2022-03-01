@@ -20,7 +20,7 @@
         <div class="bg-wp_2"></div>
 
         <!-- whats app -->
-        <div class="container-wp">
+        <div class="container-wp" id="app">
             
             <div class="container-contact">
 
@@ -55,11 +55,11 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div class="contact">
+                <div class="contact" v-for="(el,i) in contact">
                     
                     <div class="profile">
                         <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
+                            <img :src="el.avatar" alt="">
                         </div>
                         
                         <div class="contact-chat">
@@ -69,178 +69,61 @@
                     </div>
 
                     <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                <div class="contact">
-                    
-                    <div class="profile">
-                        <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
-                        </div>
-                        
-                        <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Tutto fatto</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-date">28/02/2022 12:07</div>
-                </div>
-                
+                </div>                
 
             </div>
 
             <div class="container-chat">
+
+                <div class="header-profile">
+                    <div class="profile">
+                        <div class="img-profile">
+                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
+                        </div>
+                        <div class="contact-chat">
+                            <div>Michele</div>
+                            <div>Ultimo accesso: 28/02/2022 12:07</div>
+                        </div>
+                    </div>
+
+                    <div class="icon">
+                        <div><i class="fa-solid fa-circle-notch"></i></div>
+                        <div><i class="fa-solid fa-message"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <div class="message sent">
+                        <div>Hai portato a spasso il cane?</div>
+                        <div>10/01/2020 15:50:00</div>
+                    </div>
+
+                    <div class="message sent">
+                        <div>Ricordati di dargli da mangiare</div>
+                        <div>10/01/2020 15:50:00</div>
+                    </div>
+                    
+                    <div class="message recived">
+                        <div>Tutto fatto.</div>
+                        <div>10/01/2020 16:15:22</div>
+                    </div>
+                </div>
+
+                <div class="write-chat">
+                    <div class="icon-text">
+                        <div><i class="fa-regular fa-face-grin"></i></div>
+                        <div><i class="fa-solid fa-paperclip"></i></div>
+                    </div>
+
+                   
+                    <input type="text" placeholder="Scrivi un messaggio" class="input-text">
+                    
+
+                    <div class="audio-icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div>
 
             </div>
 
