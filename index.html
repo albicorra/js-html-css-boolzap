@@ -55,7 +55,7 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div class="contact" v-for="(el,i) in contact">
+                <div class="contact" v-for="(el,i) in contact" @click="contactChat(i)">
                     
                     <div class="profile">
                         <div class="img-profile">
@@ -73,35 +73,17 @@
 
             </div>
 
-            
-            <div class="container-chat active">
 
-                <div class="container-homepage">
-                    <div class="home-img">
-                        <img src="img/Screenshot (13).png" alt="">
-                    </div>
-
-                    <div class="home-text">
-                        <h1>Mantieni il telefono connesso</h2>
-                        <p>WhatsApp si collega al tuo telefono per sincronizzare i messaggi. Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.</p>
-                    </div>
-
-                    <p>Chiama dal computer con WhatsApp per Windows. Scaricalo ora</p>
-                </div>
-
-            </div>
-            
-
-            <div class="container-chat" v-for="(el,i) in contact">
+            <div class="container-chat" v-for="(el,i) in contact" :class="i + 1 == currentIndex ? 'active' : '' ">
 
                 <div class="header-profile">
                     <div class="profile">
                         <div class="img-profile">
-                            <img src="https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50" alt="">
+                            <img :src="el.avatar" alt="">
                         </div>
                         <div class="contact-chat">
-                            <div>Michele</div>
-                            <div>Ultimo accesso: 28/02/2022 12:07</div>
+                            <div>{{el.name}}</div>
+                            <div>Ultimo accesso: {{el.messages[el.messages.length-1].date}}</div>
                         </div>
                     </div>
 
@@ -113,20 +95,12 @@
                 </div>
 
                 <div class="chat">
-                    <div class="message sent">
-                        <div>Hai portato a spasso il cane?</div>
-                        <div>10/01/2020 15:50:00</div>
+
+                    <div class="message" v-for="(el, i) in el.messages" :class="el.status">
+                        <div>{{el.text}}</div>
+                        <div>{{el.date}}</div>
                     </div>
 
-                    <div class="message sent">
-                        <div>Ricordati di dargli da mangiare</div>
-                        <div>10/01/2020 15:50:00</div>
-                    </div>
-                    
-                    <div class="message recived">
-                        <div>Tutto fatto.</div>
-                        <div>10/01/2020 16:15:22</div>
-                    </div>
                 </div>
 
                 <div class="write-chat">
@@ -142,6 +116,24 @@
                     <div class="audio-icon">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
+                </div>
+
+            </div>
+
+            <!-- schermata iniziale -->
+            <div id="home-page" class="container-chat" :class=" currentIndex == 0 ? 'active' : '' ">
+
+                <div class="container-homepage">
+                    <div class="home-img">
+                        <img src="img/Screenshot (13).png" alt="">
+                    </div>
+
+                    <div class="home-text">
+                        <h1>Mantieni il telefono connesso</h2>
+                        <p>WhatsApp si collega al tuo telefono per sincronizzare i messaggi. Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.</p>
+                    </div>
+
+                    <p>Chiama dal computer con WhatsApp per Windows. Scaricalo ora</p>
                 </div>
 
             </div>

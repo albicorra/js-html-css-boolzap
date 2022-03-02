@@ -1,3 +1,6 @@
+let homePage = document.getElementById('home-page')
+ 
+
 const app = new Vue ({
     
     el: '#app',
@@ -7,6 +10,7 @@ const app = new Vue ({
             {
                 name: 'Michele',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50',
+                active: false,
                 visible: true,
                 messages: [
 
@@ -32,6 +36,7 @@ const app = new Vue ({
             {
                 name: 'Fabio',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=2fa0df73fe58cc54367f9fdd8d86b073',
+                active: false,
                 visible: true,
                 messages: [
 
@@ -57,6 +62,7 @@ const app = new Vue ({
             {
                 name: 'Samuele',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=a84e32424b61b2c7a0c4e9d6451375c2',
+                active: false,
                 visible: true,
                 messages: [
 
@@ -82,6 +88,7 @@ const app = new Vue ({
             {
                 name: 'Luisa',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=560a7437a5808aa3102849d9e89fa0c5',
+                active: false,
                 visible: true,
                 messages: [
 
@@ -101,9 +108,17 @@ const app = new Vue ({
 
         ],
 
+        currentIndex: 0,
+
     },
 
     methods:{
+
+        contactChat: function(index){
+
+            this.currentIndex = index + 1
+
+        }
 
     },
 

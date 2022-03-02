@@ -41,7 +41,7 @@ img{
     bottom: 50px;
     right: 150px;
     display: flex;
-    background-color:blue;  
+    background-color:#F8F8F8;  
 }
 
 .container-contact{
@@ -271,6 +271,7 @@ img{
     margin-top: 2px;
     border-radius: 10px;
     max-width: 70%;
+    min-width: 100px;
     position: relative;
 }
 
@@ -279,7 +280,7 @@ img{
     align-self: flex-end;
 }
 
-.message.recived{
+.message.received{
     background-color: #fff;
     align-self: flex-start;
 }
@@ -291,10 +292,10 @@ img{
     right: 5px;
 }
 
-.message.sent + .message.recived{
+.message.sent + .message.received{
     margin-top: 10px;
 }
-.message.recived + .message.sent{
+.message.received + .message.sent{
     margin-top: 10px;
 }
 
