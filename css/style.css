@@ -232,10 +232,7 @@ img{
     height: 45px;
     background-color: #fff;
     border-radius: 10px;
-}
-
-.input-text::placeholder{
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .input-text:focus-visible{

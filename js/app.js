@@ -109,6 +109,7 @@ const app = new Vue ({
         ],
 
         currentIndex: 0,
+        newMessageText: '',
 
     },
 
@@ -116,9 +117,53 @@ const app = new Vue ({
 
         contactChat: function(index){
 
-            this.currentIndex = index + 1
+            this.currentIndex = index + 1;
 
-        }
+        },
+
+        
+
+        sendMessage: function(index){
+
+            console.log(this.newMessageText);
+            console.log(this.contact[index].messages);
+
+            const d= new Date()
+
+            if( this.newMessageText.length > 0 ){
+
+                this.contact[index].messages.push(
+                    {
+                        date: `10/01/2020 15:50:00`,
+                        text: this.newMessageText,
+                        status: 'sent'
+                    }
+                )
+
+            }
+
+            this.newMessageText = '';
+
+            setTimeout( ()=> {
+
+                console.log(this)
+                this.replyMessage(index)
+
+            }, 1000);
+
+        },
+
+        replyMessage: function(index){
+
+            this.contact[index].messages.push(
+                {
+                    date: '10/01/2020 15:50:00',
+                    text: 'Ok!',
+                    status: 'received'
+                }
+            )
+
+        },
 
     },
 

@@ -110,7 +110,7 @@
                     </div>
 
                    
-                    <input type="text" placeholder="Scrivi un messaggio" class="input-text">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMessageText" class="input-text" @keyup.enter="sendMessage(i)">
                     
 
                     <div class="audio-icon">
