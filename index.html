@@ -52,10 +52,10 @@
 
                 <div class="nav-bar">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputSerch" @keyup="serchContact">
                 </div>
 
-                <div class="contact" v-for="(el,i) in contact" @click="contactChat(i)">
+                <div class="contact" v-for="(el,i) in contact" @click="contactChat(i)" :class=" el.visible ? 'active' : '' ">
                     
                     <div class="profile">
                         <div class="img-profile">

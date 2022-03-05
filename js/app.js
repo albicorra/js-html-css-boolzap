@@ -8,7 +8,7 @@ const app = new Vue ({
 
         contact: [
             {
-                name: 'Michele',
+                name: 'michele',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=03730f4cd3bb280fde679b017fd9fc50',
                 active: false,
                 visible: true,
@@ -34,7 +34,7 @@ const app = new Vue ({
             },
 
             {
-                name: 'Fabio',
+                name: 'fabio',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=2fa0df73fe58cc54367f9fdd8d86b073',
                 active: false,
                 visible: true,
@@ -60,7 +60,7 @@ const app = new Vue ({
             },
 
             {
-                name: 'Samuele',
+                name: 'samuele',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=a84e32424b61b2c7a0c4e9d6451375c2',
                 active: false,
                 visible: true,
@@ -86,7 +86,7 @@ const app = new Vue ({
             },
               
             {
-                name: 'Luisa',
+                name: 'luisa',
                 avatar: 'https://doodleipsum.com/300x300/avatar-2?i=560a7437a5808aa3102849d9e89fa0c5',
                 active: false,
                 visible: true,
@@ -111,6 +111,8 @@ const app = new Vue ({
         currentIndex: 0,
         newMessageText: '',
 
+        inputSerch: '',
+
     },
 
     methods:{
@@ -118,6 +120,7 @@ const app = new Vue ({
         contactChat: function(index){
 
             this.currentIndex = index + 1;
+            this.inputSerch = ''
 
         },
 
@@ -164,6 +167,25 @@ const app = new Vue ({
             )
 
         },
+
+        serchContact: function() {
+
+            /* if (!this.contact.name.includes(this.inputSerch)) {
+                console.log(this.contact.visible)
+            } */
+
+            this.contact.forEach( el => {
+                
+                if (!el.name.includes(this.inputSerch)) {
+                    el.visible = false
+                }else{
+                    el.visible = true
+                }
+
+            });
+
+
+        }
 
     },
 

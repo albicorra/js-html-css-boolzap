@@ -170,12 +170,17 @@ img{
 .contact{
     height: 60px;
     background-color: #fff;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 10px;  
     border-bottom: 1px solid #E9EDEF;
 }
+
+.contact.active{
+    display: flex;
+}
+
 
 .contact:hover{
     background-color: #F5F6F6;
@@ -186,6 +191,10 @@ img{
     display: flex;
     flex-direction: column;
     padding-left: 10px;
+}
+
+.contact-chat > div:first-child{
+    text-transform: capitalize;
 }
 
 .contact-chat > div:last-child{
