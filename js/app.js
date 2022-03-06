@@ -110,8 +110,8 @@ const app = new Vue ({
 
         currentIndex: 0,
         newMessageText: '',
-
         inputSerch: '',
+        classMenu: '',
 
     },
 
@@ -123,8 +123,6 @@ const app = new Vue ({
             this.inputSerch = ''
 
         },
-
-        
 
         sendMessage: function(index){
 
@@ -170,20 +168,39 @@ const app = new Vue ({
 
         serchContact: function() {
 
-            /* if (!this.contact.name.includes(this.inputSerch)) {
-                console.log(this.contact.visible)
-            } */
-
             this.contact.forEach( el => {
                 
-                if (!el.name.includes(this.inputSerch)) {
-                    el.visible = false
+                if (el.name.includes(this.inputSerch)) {
+                    el.visible = true;
                 }else{
-                    el.visible = true
+                    el.visible = false;
                 }
 
             });
 
+        },
+
+        activeMenu: function() {
+
+            if (this.classMenu == ''){
+                this.classMenu = 'active'
+                console.log(this.classMenu)
+            }else if(this.classMenu == 'active'){
+                this.classMenu = ''
+                console.log(this.classMenu)
+            }
+            
+        },
+
+        deleteMessage: function(index) {
+
+            
+
+            if(this.contact[index].messages.length !== 1){
+                this.contact[index].messages.pop()
+            }
+            
+            console.log(this.contact[index].messages.length)
 
         }
 

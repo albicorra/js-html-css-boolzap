@@ -44,7 +44,7 @@
                     <div class="bell">
                         <div><i class="fa-solid fa-bell-slash"></i></div>
                     </div>
-                    <div class="message">
+                    <div class="message-alert">
                         <p>Ricevi le notifiche di nuovi utenti</p>
                         <p>Atiiva le notifiche desktop</p>
                     </div>
@@ -87,10 +87,15 @@
                         </div>
                     </div>
 
+                    <div class="chat-menu" :class="classMenu">
+                        <div class="menu-item" @click="deleteMessage(i)">Elimina chat</div>
+                        <div class="menu-item">Info chat</div>
+                    </div>
+
                     <div class="icon">
                         <div><i class="fa-solid fa-circle-notch"></i></div>
                         <div><i class="fa-solid fa-message"></i></div>
-                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        <div @click="activeMenu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
                     </div>
                 </div>
 

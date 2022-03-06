@@ -50,6 +50,7 @@ img{
     display: flex;
     flex-direction: column;
     overflow: auto;
+    border: 3px solid #E9EDEF;
 }
 
 .container-chat{
@@ -74,6 +75,7 @@ img{
     align-items: center;
     background-color: #EFF2F5;
     width: 100%;
+    position: relative;
 }
 
 .profile{
@@ -92,6 +94,10 @@ img{
     align-items: center;
     color: #54656F;
     font-size: 20px;
+}
+
+.icon > div{
+    padding: 0px 10px;
 }
 
 .img-profile{
@@ -124,11 +130,11 @@ img{
     color: #54BDEB;
 }
 
-.message{
+.message-alert{
     padding-left: 15px;
 }
 
-.message > p:last-child{
+.message-alert > p:last-child{
     color: #54656F;
     text-decoration: underline;
     cursor: pointer;
@@ -213,6 +219,34 @@ img{
 
 
 /* container chat */
+.chat-menu{
+    position: absolute;
+    right: 10px;
+    top: 85%;
+    z-index: 5;
+    display: none;
+    width: 250px;
+    flex-direction: column;
+    border: 1px solid #E9EDEF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.chat-menu.active{
+    display: flex;
+}
+
+.menu-item{
+    padding: 10px;
+    border-bottom: 1px solid #E9EDEF;
+}
+
+.menu-item:hover{
+    background-color: #F5F6F6;
+    cursor: pointer;
+}
+
 /* write chat */
 .write-chat{
     height: 60px;
@@ -232,8 +266,6 @@ img{
     gap: 20px;
     font-size: 20px;
 }
-
-
 
 .input-text{
     flex-grow: 1;
@@ -279,6 +311,7 @@ img{
     max-width: 70%;
     min-width: 100px;
     position: relative;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .message.sent{
